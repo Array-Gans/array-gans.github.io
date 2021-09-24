@@ -1,42 +1,4 @@
 <title>Hacked?</title>
-<style type="text/css">
-body{
-  background-color:black;
-  background-repeat:no-repeat;
-  background-size:auto;
-  color:green;
-  font-size:18px;
-}
-</style>
-<script type="text/javascript">
-var text="root@localhost~# hacked by array<br>root@localhost~# thank : manusia biasa team - sanjungan jiwa - indonesian code party<br>root@localhost~# message : security is just an illusion>";
-var delay=19;
-var currentChar=1;
-var destination="[none]";
-function type()
-{{
-var dest=document.getElementById(destination);
-if (dest)
-{
-dest.innerHTML=text.substr(0, currentChar)+"<blink>_</blink>";
-currentChar++;
-if (currentChar>text.length)
-{
-currentChar=1;
-setTimeout("type()", 10000);
-}
-else
-{
-setTimeout("type()", delay);
-}}}}
-function startTyping(textParam, delayParam, destinationParam)
-{
-text=textParam;
-delay=delayParam;
-currentChar=1;
-destination=destinationParam;
-type();
-}
-javascript:startTyping(text, 50, "kontol");
-</script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/Array-Gans/array-gans.github.io/main/index.css">
+<script src="https://raw.githubusercontent.com/Array-Gans/array-gans.github.io/main/index.js"></script>
 <b><div id="kontol"></div></b>
