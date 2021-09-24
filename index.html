@@ -1,41 +1,42 @@
-<script language="javascript">
-<!--
-var tl = new Array(
-"Hacked by Array",
-"Manusia Biasa Team",
-"Arraygans@hotmail.com");
-var speed = 100;
-var index = 0; text_pos = 0;
-var str_length = tl[0].length;
-var contents, row;
-function type_text()
-{
-    contents = '';
-    row = Math.max(0, index-25);
-    while (row<index) contents += tl[row++] + '\r\n';
-    document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "_";
-    if (text_pos ++== str_length)
-    {
-        text_pos = 0;
-        index++;
-        if (index != tl.length)
-        {
-            str_length = tl[index].length;
-            setTimeout("type_text()", 300);
-        }
-    } else
-    setTimeout("type_text()", speed);
+<title>Hacked?</title>
+<style type="text/css">
+body{
+  background-color:black;
+  background-repeat:no-repeat;
+  background-size:auto;
+  color:green;
+  font-size:18px;
 }
+</style>
+<script type="text/javascript">
+var text="root@localhost~# hacked by array<br>root@localhost~# thank : manusia biasa team - sanjungan jiwa - indonesian code party<br>root@localhost~# message : security is just an illusion>";
+var delay=19;
+var currentChar=1;
+var destination="[none]";
+function type()
+{{
+var dest=document.getElementById(destination);
+if (dest)
+{
+dest.innerHTML=text.substr(0, currentChar)+"<blink>_</blink>";
+currentChar++;
+if (currentChar>text.length)
+{
+currentChar=1;
+setTimeout("type()", 10000);
+}
+else
+{
+setTimeout("type()", delay);
+}}}}
+function startTyping(textParam, delayParam, destinationParam)
+{
+text=textParam;
+delay=delayParam;
+currentChar=1;
+destination=destinationParam;
+type();
+}
+javascript:startTyping(text, 50, "kontol");
 </script>
-<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0" onload="type_text()"  no-repeat center center fixed;  -webkit-background-size: cover;  -moz-background-size: cover;  -o-background-size: cover;  background-size: cover;">
-<table border="0" width="100%" cellspacing="0" cellpadding="0">
-</table>
-<p align="center">&nbsp;
-</p>
-<form>
-<font face="trebuchet ms, verdana, arial, helvetica, sans-serif" size="2">
-<div align="center">
-kontolkontolkontol
-<textarea rows="20" cols="91" wrap="soft" border:0;border-radius:4px;box-shadow: 0 1px 11px rgba(0, 0, 0, 0.7);outline:none!important;margin-top:-40px;">
-</textarea></div></font></form></td></tr></tbody></table>
-<SCRIPT type="text/javascript">if (typeof document.onselectstart!="undefined") {document.onselectstart=new Function ("return false");}else{document.onmousedown=new Function ("return false");document.onmouseup=new Function ("return true");}</SCRIPT>
+<b><div id="kontol"></div></b>
